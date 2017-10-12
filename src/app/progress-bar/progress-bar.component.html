@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="">
+    <md-card>
+      <md-card-content>
+        <h3 class="example-h2">프로젝트 진행률</h3>
+        <section class="example-section">
+          <md-progress-bar class="example-margin" [color]="color" [mode]="mode" [value]="value" [bufferValue]="bufferValue">
+          </md-progress-bar>
+        </section>
+      </md-card-content>
+    </md-card>
+  </div>
+  <!-- md-progress-bar의 mode에 따라서 progress-bar의 모양이 조금 다름 -->
+  <section class="example-section" *ngIf="mode == 'determinate' || mode == 'buffer'">
+    <label class="example-margin">Progress:</label>
+    <md-slider class="example-margin" [(ngModel)]="value"></md-slider>
+  </section>
+  <!-- <section class="example-section" *ngIf="mode == 'buffer'">
+  <label class="example-margin">Buffer:</label>
+  <md-slider class="example-margin" [(ngModel)]="bufferValue"></md-slider>
+</section> -->
+</div>

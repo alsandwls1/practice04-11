@@ -1,0 +1,73 @@
+<!-- <div class="">
+
+</div>
+    <router-outlet name="router-progress"></router-outlet>
+    <router-outlet name="router-side"></router-outlet>
+    <router-outlet name="router-content"></router-outlet> -->
+
+<!-- <div class="">
+  <md-grid-list cols="5" rowHeight="100">
+    <md-grid-tile colspan="1" rowspan="4">
+      <app-demo-side></app-demo-side>
+    </md-grid-tile>
+    <md-grid-tile colspan="4" rowspan="1">
+      <app-demo-progress></app-demo-progress>
+    </md-grid-tile>
+    <md-grid-tile colspan="4" rowspan="3">
+      content
+      <router-outlet name="demo-content"></router-outlet>
+    </md-grid-tile>
+  </md-grid-list>
+</div> -->
+
+<!-- <div class="">
+  <md-sidenav-container>
+    <md-grid-list cols="5" rowHeight="100">
+      <md-grid-tile colspan="5" rowspan="1">
+        progress
+        <app-demo-progress></app-demo-progress>
+      </md-grid-tile>
+      <md-grid-tile colspan="1" rowspan="4">
+        side
+        <md-sidenav #sidenav mode="side" opened="true">
+          <app-demo-side></app-demo-side>
+        </md-sidenav>
+      </md-grid-tile>
+      <md-grid-tile colspan="4" rowspan="4">
+        <button md-icon-button (click)="sidenav.toggle()">
+          <i class="fa fa-list-ul"></i>
+        </button>
+        <router-outlet name="router-content"></router-outlet>
+      </md-grid-tile>
+    </md-grid-list>
+  </md-sidenav-container>
+</div> -->
+<!-- <div class="container">
+	<div fxLayout="row" fxLayoutAlign="start center" class="content">
+		<div class="blocks" fxFlex = "20%">1</div>
+		<div class="blocks" fxFlex = "60%">2</div>
+		<div class="blocks" fxFlex>3</div>
+	</div>
+</div>
+<div class="container">
+	<div fxLayout="row" fxLayoutAlign="space-around center" class="content">
+		<div class="blocks">1</div>
+		<div class="blocks">2</div>
+		<div class="blocks">3</div>
+	</div>
+</div> -->
+<md-sidenav-container fullscreen class="sidenav-container" style="top: 100px !important;">
+  <md-sidenav #sidenav mode="side" opened="true">
+    <app-demo-side></app-demo-side>
+  </md-sidenav>
+  <button md-icon-button (click)="sidenav.toggle()">
+    <i class="fa fa-list-ul"></i>
+  </button>
+  <div class="project-content">
+    <app-demo-progress></app-demo-progress>
+    <div class="tags" style="padding: 20px">
+      <router-outlet name="router-content"></router-outlet>
+    </div>
+
+  </div>
+</md-sidenav-container>

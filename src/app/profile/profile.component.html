@@ -1,0 +1,61 @@
+<div class="container">
+  <h3>프로필 관리</h3>
+  <br>
+  <table class="table">
+    <tr>
+      <td colspan="3" align="center"><a md-button (click)="openDialog()">
+        <img src="{{img1}}" width="160" (click)="openDialog()"></a>
+        <br>
+      </td>
+    </tr>
+    <tr>
+      <td>이메일</td>
+      <td>{{email}}</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td style="width:15%">이름</td>
+      <td [appHidden]="!isShow" style="width:75%">{{name}}</td>
+      <td [appHidden]="isShow">
+        <label for="name">이름수정</label>
+        <div class="input-group">
+          <input type="text" class="form-control" #i type="text" id="name" name="name" [ngModel]="name" placeholder="Name">
+          <div class="input-group-btn">
+            <button class="btn btn-default" (click)="updateName(i.value)">
+              SEND
+            </button>
+          </div>
+        </div>
+      </td>
+      <td style="width:10%"><a class="md-icon" md-icon-button (click)="isShow=!isShow"><p class="glyphicon glyphicon-menu-down"></p></a></td>
+    </tr>
+
+    <tr>
+      <td>비밀번호</td>
+      <td [appHidden]="!isShow2">{{password}}</td>
+      <td [appHidden]="isShow2">
+        <label for="password">비밀번호수정</label>
+        <div class="input-group">
+          <input type="text" class="form-control" #i2 type="text" id="password" name="password" [ngModel]="password" placeholder="Password">
+          <div class="input-group-btn">
+            <button class="btn btn-default" (click)="updatePassword(i2.value)">
+              SEND
+            </button>
+          </div>
+        </div>
+      </td>
+      <td><a class="md-icon" md-icon-button (click)="isShow2=!isShow2"><p class="glyphicon glyphicon-menu-down"></p></a></td>
+    </tr>
+
+    <tr>
+      <td>계정삭제</td>
+      <td [appHidden]="!isShow3"></td>
+      <td [appHidden]="isShow3">
+        계정을삭제하시겠습니까?
+        <button type="submit" class="btn btn-danger btn-sm">yes</button>
+      </td>
+      <td><a class="md-icon" md-icon-button (click)="isShow3=!isShow3"><p class="glyphicon glyphicon-menu-down"></p></a></td>
+    </tr>
+  </table>
+</div>

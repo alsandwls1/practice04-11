@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>회원가입</h2>
+    <form name="form" (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate>
+      <div class="form-group">
+        <label for="email">이메일</label>
+        <input type="email" class="form-control" [(ngModel)]="email" id="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">비밀번호</label>
+        <input type="text" class="form-control" [(ngModel)]="password" id="password" name="password" placeholder="password" required>
+      </div>
+      <div class="form-group">
+        <label for="name">성명</label>
+        <input type="text" class="form-control" [(ngModel)]="name" id="name" name="name" placeholder="name" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-sm" [disabled]="f.invalid" >
+          <b class="glyphicon glyphicon-plus"></b>SEND
+        </button>
+        <a [routerLink]="['/login']" class="btn btn-link">취소</a>
+      </div>
+    </form>
+  </div>
+</div>

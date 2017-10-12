@@ -1,0 +1,30 @@
+<!-- <app-progress-bar></app-progress-bar>
+
+<div class="project">
+  <md-sidenav-container fullscreen class="sidenav-container" style="top: 220px !important;">
+    <md-sidenav #sidenav mode="side" opened="true">
+      <app-slide-bar></app-slide-bar>
+    </md-sidenav>
+    <button md-icon-button (click)="sidenav.toggle()">
+      <i class="fa fa-list-ul"></i>
+    </button>
+    <div class="project-content">
+      클릭하면 동적으로 화면 전환해야하는데.... 이건 어떻게 처리하나요?
+
+    </div>
+  </md-sidenav-container>
+</div> -->
+<md-sidenav-container fullscreen class="sidenav-container" style="top: 100px !important;">
+  <md-sidenav #sidenav mode="side" opened="true">
+    <app-slide-bar></app-slide-bar>
+  </md-sidenav>
+  <button md-icon-button (click)="sidenav.toggle()">
+    <i class="fa fa-list-ul"></i>
+  </button>
+  <div class="project-content">
+    <app-progress-bar></app-progress-bar>
+    <div class="tags" style="padding: 20px">
+    </div>
+
+  </div>
+</md-sidenav-container>

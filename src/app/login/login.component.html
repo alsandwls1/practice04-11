@@ -1,0 +1,27 @@
+
+<div class="container">
+  <div class="panel panel-warning" *ngIf="errorMessage">
+    <div class="panel-body">
+      <b class="text-warning">{{errorMessage}}</b>
+    </div>
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <h2>로그인</h2>
+    <form name="form" #loginform="ngForm" (ngSubmit)="loginSubmit(loginform)" novalidate>
+      <div class="form-group">
+        <label for="email">이메일</label>
+        <input type="email" class="form-control" [(ngModel)]="a" id="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">비밀번호</label>
+        <input type="text" class="form-control" [(ngModel)]="b" id="password" name="password" placeholder="password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-sm" [disabled]="loginform.invalid" >
+          <b class="glyphicon glyphicon-plus"></b>LOGIN
+        </button>
+        <a md-button [routerLink]="['/register']" class="btn btn-link">회원가입</a>
+      </div>
+    </form>
+  </div>
+</div>

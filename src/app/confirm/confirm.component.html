@@ -1,0 +1,32 @@
+<div class="">
+  <h2 md-dialog-title>My Dialog</h2>
+  <hr>
+  <md-dialog-content>
+    <h4>이미지 선택</h4>
+    <br>
+    <!-- 클릭했을 때, 동적으로 mat-figure가 변할 수 있도록 제어하기 -->
+    <!-- <div class="image">
+      <md-grid-list cols="4" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
+        <md-grid-tile md-rowspan="3" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1" *ngFor="let img of images; let i=index">
+          <a md-button (click)="onClick(img.url)">
+            <img #i src="{{img.url}}" alt="X" width="100%">
+          </a>
+        </md-grid-tile>
+      </md-grid-list>
+    </div> -->
+    <div class="gridContainer">
+      <md-grid-list cols="4">
+        <md-grid-tile *ngFor="let img of images" colspan="1" rowspan="1">
+          <a md-button (click)="onClick(img.url)">
+            <img #i src="{{img.url}}" alt="X" width="100%">
+          </a>
+        </md-grid-tile>
+      </md-grid-list>
+    </div>
+  </md-dialog-content>
+  <hr>
+  <md-dialog-actions>
+    <button md-raised-button (click)="onCloseSave()">저장하기</button>
+    <button md-raised-button (click)="onCloseCancel()">취소</button>
+  </md-dialog-actions>
+</div>

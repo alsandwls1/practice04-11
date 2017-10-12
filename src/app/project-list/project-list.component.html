@@ -1,0 +1,37 @@
+<div class="container">
+  <form class="form" (ngSubmit)="search(f)" #f="ngForm">
+    <div class="input-group">
+      <input type="text" class="form-control" name="key" [(ngModel)]="key" required placeholder="Search">
+      <div class="input-group-btn">
+        <button class="btn btn-default">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+      </div>
+    </div>
+  </form>
+  <br>
+
+  <div *ngFor="let project of projects">
+    <md-card>
+      <md-card-title>
+        <h2 class="md-headline">{{project.p_name}}</h2>
+        <h4 class="md-subhead">{{project.p_domain}}</h4>
+      </md-card-title>
+
+      <md-card-content>
+        <md-card-actions layout="row" layout-align="center center" align="right">
+          <a class="btn btn-default">관리하기</a>
+          <!--  href="project" 클릭했을 때 도메인으로 컨트롤하면 될 듯(url-/project/{{domain}}) -->
+          <a class="btn btn-primary" href="demo-pro">들어가기</a>
+        </md-card-actions>
+      </md-card-content>
+    </md-card>
+    <br>
+  </div>
+
+  <div class="" align="center">
+    <a md-button type="button" href="new-project" class="new-project">
+        <b class="glyphicon glyphicon-plus"></b> 새 프로젝트 만들기
+      </a>
+  </div>
+</div>

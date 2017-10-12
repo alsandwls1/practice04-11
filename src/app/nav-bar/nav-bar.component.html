@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="home" *ngIf="!session"><img src="/assets/image/logo.png" style="max-width:48px; margin-top: -14px;" alt="logo"></a>
+      <a class="navbar-brand" href="project-list" *ngIf="session"><img src="/assets/image/logo.png" style="max-width:48px; margin-top: -14px;" alt="logo"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active" ><a routerLink="home">홈</a></li>
+        <li routerLinkActive="active" ><a routerLink="description">제품소개</a></li>
+        <li routerLinkActive="active"><a routerLink="consult">제품문의</a></li>
+        <li routerLinkActive="active" *ngIf="session"><a routerLink="project-list">프로젝트</a></li>
+        <!-- <label for="progress-bar">Result</label>
+        <md-progress-bar class="progress-bar" id="progress-bar" color="primary" mode="determinate" 50="value" bufferValue="75">
+        </md-progress-bar> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active" *ngIf="!session"><a routerLink="register"><span class="glyphicon glyphicon-user"></span> 회원가입</a></li>
+        <li routerLinkActive="active" *ngIf="!session"><a routerLink="login"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+        <li routerLinkActive="active" *ngIf="session"><a routerLink="profile"><b class="glyphicon glyphicon-wrench"></b> 프로필관리</a></li>
+        <li routerLinkActive="active" *ngIf="session"><a [routerLink]="['/home']" (click)="logout()"><b class="glyphicon glyphicon-log-out"></b> 로그아웃</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

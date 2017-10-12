@@ -1,0 +1,16 @@
+td {
+  margin: 10px;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+.md-icon {
+  margin: 0 0.6rem;
+  height: 2.5rem;
+  min-width: 0;
+  line-height: 2.5rem;
+  width: 2.5rem;
+  color: rgb(117, 117, 117);
+}

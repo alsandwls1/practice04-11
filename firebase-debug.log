@@ -1,0 +1,78 @@
+[debug] [2017-10-11T07:16:52.579Z] ----------------------------------------------------------------------
+[debug] [2017-10-11T07:16:52.583Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-10-11T07:16:52.583Z] CLI Version:   3.13.1
+[debug] [2017-10-11T07:16:52.583Z] Platform:      win32
+[debug] [2017-10-11T07:16:52.583Z] Node Version:  v8.6.0
+[debug] [2017-10-11T07:16:52.583Z] Time:          Wed Oct 11 2017 16:16:52 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:16:52.583Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-11T07:16:52.595Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-11T07:16:52.596Z] > authorizing via signed-in user
+[debug] [2017-10-11T07:16:52.597Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-10-11T07:16:52.597Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/T66A_MxOqLF4CwFK0a2a3mSOXln0e6H85UlZ4jcHIpg',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Oct 11 2017 16:16:52 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:16:52.875Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-11T07:16:52.883Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/chat-demo-a204d  
+ Wed Oct 11 2017 16:16:52 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:16:53.877Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-11T07:16:53.879Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/chat-demo-a204d/tokens  
+ Wed Oct 11 2017 16:16:53 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:16:54.891Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\projectd\workspace_weeds\practice04-10-1'...
+[info] 
+[debug] [2017-10-11T07:16:54.901Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/chat-demo-a204d  
+ Wed Oct 11 2017 16:16:54 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:16:56.092Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-11T07:16:56.093Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/539799933789/clients/_:getWebAppConfig  
+ Wed Oct 11 2017 16:16:56 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:16:56.816Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-11T07:16:56.855Z] TypeError: Cannot read property 'public' of undefined
+    at Server.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\serve\hosting.js:34:17)
+    at Object.onceWrapper (events.js:314:30)
+    at emitNone (events.js:105:13)
+    at Server.emit (events.js:207:7)
+    at emitListeningNT (net.js:1371:10)
+    at _combinedTickCallback (internal/process/next_tick.js:135:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-10-11T07:43:45.709Z] ----------------------------------------------------------------------
+[debug] [2017-10-11T07:43:45.712Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-10-11T07:43:45.712Z] CLI Version:   3.13.1
+[debug] [2017-10-11T07:43:45.713Z] Platform:      win32
+[debug] [2017-10-11T07:43:45.713Z] Node Version:  v8.6.0
+[debug] [2017-10-11T07:43:45.713Z] Time:          Wed Oct 11 2017 16:43:45 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:43:45.713Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-11T07:43:45.730Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-11T07:43:45.730Z] > authorizing via signed-in user
+[debug] [2017-10-11T07:43:45.733Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/chat-demo-a204d  
+ Wed Oct 11 2017 16:43:45 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:43:46.819Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-11T07:43:46.821Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/chat-demo-a204d/tokens  
+ Wed Oct 11 2017 16:43:46 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:43:47.873Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\projectd\workspace_weeds\practice04-10-1'...
+[info] 
+[debug] [2017-10-11T07:43:47.883Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/chat-demo-a204d  
+ Wed Oct 11 2017 16:43:47 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:43:49.102Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-11T07:43:49.103Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/539799933789/clients/_:getWebAppConfig  
+ Wed Oct 11 2017 16:43:49 GMT+0900 (대한민국 표준시)
+[debug] [2017-10-11T07:43:49.927Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-11T07:43:49.982Z] TypeError: Cannot read property 'public' of undefined
+    at Server.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\serve\hosting.js:34:17)
+    at Object.onceWrapper (events.js:314:30)
+    at emitNone (events.js:105:13)
+    at Server.emit (events.js:207:7)
+    at emitListeningNT (net.js:1371:10)
+    at _combinedTickCallback (internal/process/next_tick.js:135:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[error] 
+[error] Error: An unexpected error has occurred.

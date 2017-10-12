@@ -1,0 +1,9 @@
+/*.navbar {
+  position: absolute;
+  z-index: 1;
+}*/
+nav {
+  position:  relative;
+  z-index: 1;
+  width: 100%;
+}
